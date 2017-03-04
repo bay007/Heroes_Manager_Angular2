@@ -10,15 +10,15 @@ import { HeroService } from '../hero.service';
 })
 export class HeroesComponent implements OnInit {
 	public selectedHero:Hero;
-	public title:string;
+	
 	public heroes:Array<Hero>;
   constructor(private heroService:HeroService) { 
-  	this.title='';
+  	
 	this.heroes=[];
   }
 
 	ngOnInit() {
-			this.title = 'Heroes mannager';
+		
 		this.heroes = this.heroService.getHeroes();
 	}
 

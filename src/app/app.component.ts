@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterModule }   from '@angular/router';
 import { OnInit } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
-import { HeroesComponent } from './heroes/heroes.component';
+
 
 @Component({
   selector: 'app-root',
@@ -12,17 +12,13 @@ import { HeroesComponent } from './heroes/heroes.component';
 })
 
 export class AppComponent {
-
-	constructor(){	}
-
-	ngOnInit(): void {  	}
+	public title:string;
 	
-	
+	constructor(){
+		this.title='';
+	}
 
-	
-
+	ngOnInit(): void {
+		this.title = 'Heroes mannager';
+	}
 }
-
-RouterModule.forRoot([
-	{path: 'heroes',component: HeroesComponent}
-	])
