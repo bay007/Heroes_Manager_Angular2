@@ -1,0 +1,18 @@
+<div *ngIf="hero">
+	<div class="row">
+		<h2>
+		¡Detalles de {{hero.name}}!
+		</h2>
+	</div>
+
+	<div class="row form-group form-horizontal">
+		<span class="label label-primary">Id:</span>
+		<input type="text" name="id" readonly="true" value="{{hero.id}}" class="form-control" placeholder="Hero ID"/>
+	</div>
+
+	<div class="row form-group">
+		<span class="label label-primary">Name:</span>
+		<input type="text" name="name" placeholder="Hero name" 
+		class="form-control" [(ngModel)]="hero.name"/>
+	</div>
+</div>

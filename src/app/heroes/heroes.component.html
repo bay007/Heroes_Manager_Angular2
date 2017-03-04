@@ -1,0 +1,23 @@
+<div class="row">
+	<h1>
+	  {{title}}
+	</h1>
+</div>
+
+<hr>
+
+<div class="row">
+	<ul class="list-group">
+		<li *ngFor="let _hero of heroes" (click)="viewDetails(_hero)"
+		class="list-group-item" 
+		[class.active]="_hero===selectedHero" 
+		>
+
+		<span class="badge">{{_hero.id}}</span>{{_hero.name}}
+		
+		</li>
+	</ul>
+</div>
+<hr>
+
+<app-hero-detail [hero]="selectedHero" ></app-hero-detail>
