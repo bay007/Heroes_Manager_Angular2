@@ -4,7 +4,13 @@
 	</h1>
 </div>
 
-<a routerLink="/heroes">Heroes</a>
+<nav class="navbar navbar-default">
+	<ul class="nav navbar-nav">
+		<li routerLinkActive="active"><a routerLink="/dashboard" >Dashboard</a></li>
+		<li routerLinkActive="active"><a routerLink="/heroes" >Heroes</a></li>
+		<li class="disabled" ><a>Detail</a></li>
+	</ul>
+</nav>
  
  <!-- adding a <router-outlet> element to the bottom of the template.-->
 <router-outlet></router-outlet>

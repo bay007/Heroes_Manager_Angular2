@@ -22,4 +22,8 @@ export class HeroService {
   	return HEROES;
   };
   
+  getHero(_id: number):Hero{
+  	let hero=this.getHeroes().find(x=>x.id===_id);
+	return hero;
+  }
 }

@@ -2,8 +2,7 @@
 	<ul class="list-group">
 		<li *ngFor="let _hero of heroes" (click)="viewDetails(_hero)"
 		class="list-group-item" 
-		[class.active]="_hero===selectedHero" 
-		>
+		[class.active]="_hero===selectedHero">
 
 		<span class="badge">{{_hero.id}}</span>{{_hero.name}}
 		
@@ -12,4 +11,9 @@
 </div>
 <hr>
 
-<app-hero-detail [hero]="selectedHero" ></app-hero-detail>
+<div *ngIf="selectedHero">
+  <h2>
+    {{selectedHero.name | uppercase}} is my hero
+  </h2>
+  <button class="btn btn-primary" (click)="gotoDetail()">View Details</button>
+</div>
